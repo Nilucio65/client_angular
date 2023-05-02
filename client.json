@@ -1,0 +1,20 @@
+{
+  "clients":[
+    {
+      "id": 1,
+      "name": "Luiz Cabral",
+      "email": "luiz@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "José Ampires",
+      "email": "jose@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Maria Silva",
+      "email": "maria@gmail.com"
+    }
+
+  ]
+}
