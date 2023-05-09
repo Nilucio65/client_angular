@@ -1,3 +1,4 @@
+import { FormBuilder, FormGroup, FormsModule } from '@angular/forms';
 import { ClientService } from './../client.service';
 import { Client } from '../client';
 import { Component, OnInit } from '@angular/core';
@@ -10,15 +11,22 @@ import { Component, OnInit } from '@angular/core';
 export class ClientsComponent implements OnInit{
 
   clients: Client[]  = [];
+  formGroupClient: FormGroup;
 
-  constructor(private clientService: ClientService) {}
+  constructor(private clientService: ClientService, private formBuilder: FormBuilder) {
+    this.formGroupClient = formBuilder.group({
+      id: [''],
+      name: [''],
+      email: [''],
+    });
+  }
 
   ngOnInit(): void {
     this.getClient();
   }
 
   getClient(){
-    this.clientService.getClient(1).subscribe({
+    this.clientService.getClient().subscribe({
       next: (data) => {
         this.clients = data;
         console.log(this.clients);
@@ -28,6 +36,15 @@ export class ClientsComponent implements OnInit{
     });
   }
 
+  save(){
+    this.clientService.save(this.formGroupClient.value).subscribe({
+      next: data => {
+        this.clients.push(data);
+        this.formGroupClient.reset();
+        console.log(this.clients);
+      }
+    })
 
 
+  }
 }

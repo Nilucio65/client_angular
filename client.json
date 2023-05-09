@@ -1,5 +1,5 @@
 {
-  "clients":[
+  "clients": [
     {
       "id": 1,
       "name": "Luiz Cabral",
@@ -14,7 +14,16 @@
       "id": 3,
       "name": "Maria Silva",
       "email": "maria@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Luiz",
+      "email": "luiz@gmail"
+    },
+    {
+      "id": 5,
+      "name": "Mario",
+      "email": "mario@gmail.com"
     }
-
   ]
 }
