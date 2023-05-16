@@ -3,27 +3,12 @@
     {
       "id": 1,
       "name": "Luiz Cabral",
-      "email": "luiz@gmail.com"
+      "email": "luizCabral@gmail.com"
     },
     {
-      "id": 2,
-      "name": "José Ampires",
-      "email": "jose@gmail.com"
-    },
-    {
-      "id": 3,
-      "name": "Maria Silva",
-      "email": "maria@gmail.com"
-    },
-    {
-      "id": 4,
-      "name": "Luiz",
-      "email": "luiz@gmail"
-    },
-    {
-      "id": 5,
-      "name": "Mario",
-      "email": "mario@gmail.com"
+      "id": 6,
+      "name": "Igão",
+      "email": "igãomilgrau@email.com.br"
     }
   ]
 }
