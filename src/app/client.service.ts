@@ -8,7 +8,7 @@ import {Client} from './client';
 })
 export class ClientService {
 
-  url = "http://localhost:3000/clients/";
+  url = "http://localhost:8080/clients";
 
   constructor(private http: HttpClient) { }
 
@@ -22,10 +22,10 @@ export class ClientService {
   }
 
   remove(client: Client): Observable <void>{
-    return this.http.delete<void>(this.url + client.id);
+    return this.http.delete<void>(this.url + "/" + client.id);
   }
 
   edit(client: Client): Observable <Client>{
-    return this.http.put<Client>(this.url + client.id, client);
+    return this.http.put<Client>(this.url + "/" + client.id, client);
   }
 }
